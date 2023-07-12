@@ -1,4 +1,4 @@
-package com.example.radiobtn;
+package com.example.commands;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ public class Radiobtn {
 	
 	public static void main(String [] args) {
 		
-		ChromeOptions options = new ChromeOptions(); // Chromeoptions object
+        ChromeOptions options = new ChromeOptions(); // Chromeoptions object
 		
 		options.addArguments("--remote-allow-origins=*");
 		
@@ -23,24 +23,19 @@ public class Radiobtn {
 		/// find radio button Yes
 		WebElement radioBtnLocator = driver.findElement(By.xpath("//label[text() = 'Yes']"));
 
-		/// Verifying whether it is displayed in UI or not
-		if (radioBtnLocator.isDisplayed() == true) {
-
-			/// Verifying whether it is not selected
-			if (radioBtnLocator.isSelected() == false) {
+		/// Verifying above locator whether it is displayed in UI or not
+		if (radioBtnLocator.isDisplayed() == true) {			
 
 				/// then I am selecting radio button Yes
 				radioBtnLocator.click();
 				
-				System.out.println("Test case is passed");
-		
-			} else {
+				System.out.println("Test case is passed");						
 			
-				System.out.println("Test case is failed");
-			} 
+		} else {
+			
+			System.out.println("Test case is failed");
 		}
-
-
-     	}
+		
+	 }
 
    }

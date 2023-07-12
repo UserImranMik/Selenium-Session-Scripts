@@ -11,31 +11,25 @@ public class Getsize {
 
 	public static void main(String[] args) {
 		
-		ChromeOptions options = new ChromeOptions(); // Chromeoptions object
+		ChromeOptions options = new ChromeOptions(); // Chromeoptions object	
 		
-		options.addArguments("--remote-allow-origins=*");
+		options.addArguments("--remote-allow-origins=*");		
 		
-		WebDriver driver = new ChromeDriver(options); // Webdriver object for chrome
+		WebDriver driver = new ChromeDriver(options); // Webdriver object for chrome		
 		
-		driver.get("https://demoqa.com/radio-button");
+		driver.get("https://www.globalsqa.com/demo-site/select-dropdown-menu/");		    
 		
-		driver.manage().window().maximize();
-
-		/// find radio button Yes
-		WebElement radioBtnLocator = driver.findElement(By.xpath("//label[text() = 'Yes']"));
-
-		/// Verifying above locator whether it is displayed in UI or not
-		if (radioBtnLocator.isDisplayed() == true) {			
-
-				/// then I am selecting radio button Yes
-				radioBtnLocator.click();
-				
-				System.out.println("Test case is passed");						
-			
-		} else {
-			
-			System.out.println("Test case is failed");
-		}
+		driver.manage().window().maximize();		    
+		
+		WebElement element = driver.findElement(By.xpath("//div[@class='single_tab_div resp-tab-content resp-tab-content-active']//p//select"));		    
+		
+		element.click();	
+	    
+		Dimension dimension = element.getSize();    
+	    
+		System.out.println(dimension);     
+	    
+		System.out.println("Height : " + dimension.height +" "+ "Width : " + dimension.width);
 		
 	}
 

@@ -1,4 +1,4 @@
-package com.example.imageupload;
+package com.example.commands;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

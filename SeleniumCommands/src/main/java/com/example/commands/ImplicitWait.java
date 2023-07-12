@@ -1,4 +1,4 @@
-package com.example.implicitwait;
+package com.example.commands;
 
 import java.time.Duration;
 

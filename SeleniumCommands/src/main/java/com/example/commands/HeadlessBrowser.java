@@ -1,4 +1,4 @@
-package com.example.headlessbrowser;
+package com.example.commands;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

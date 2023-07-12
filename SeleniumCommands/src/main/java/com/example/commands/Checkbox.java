@@ -1,4 +1,4 @@
-package com.example.checkbox;
+package com.example.commands;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package com.example.screenshot;
+package com.example.commands;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

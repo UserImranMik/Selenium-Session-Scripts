@@ -1,4 +1,4 @@
-package com.example.alert;
+package com.example.commands;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

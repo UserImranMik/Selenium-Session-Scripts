@@ -1,4 +1,4 @@
-package com.example.popup;
+package com.example.commands;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

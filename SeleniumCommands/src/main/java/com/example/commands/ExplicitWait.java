@@ -1,4 +1,4 @@
-package com.example.explicit;
+package com.example.commands;
 
 import java.time.Duration;
 

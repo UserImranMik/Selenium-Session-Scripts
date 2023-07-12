@@ -1,4 +1,4 @@
-package com.example.dragdrop;
+package com.example.commands;
 
 import java.time.Duration;
 
