@@ -35,11 +35,11 @@ private static WebDriver driver;
 	    
 	 }
 	
-   public void clickVisibilityOfElementLocated(WebDriver driver, By locator, int i) {
+   public void clickVisibilityOfElementLocated(WebDriver driver, WebElement submitBtn, int i) {
 		
 		WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT_SECONDS));
 		
-		WebElement element2 = driverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		WebElement element2 = driverWait.until(ExpectedConditions.visibilityOf(submitBtn));
 		
 		element2.click();
 	}

@@ -3,6 +3,8 @@ package com.example.locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.example.utility.Utility;
@@ -11,15 +13,15 @@ public class Loginlocators {
 	
 	WebDriver driver;
 
-	By email = By.id("email");
+	By email = By.id("email"); // POM (Page Object Model)
 	
-	By password = By.id("pass");
+	By password = By.id("pass"); // POM (Page Object Model)
 	
-	By submit = By.xpath("//button[@name = 'login']");
-
-	//// For validation
+	@FindBy(xpath = "//button[@name = 'login']") // Page Factory @FindBy annotation
+	WebElement submitBtn; // Page Factory
 	
-	By home = By.xpath("//span[text() = 'Home']");
+	//// For validation	
+	By home = By.xpath("//span[text() = 'Home']"); // POM (Page Object Model)
 	
 	
      public Loginlocators(WebDriver driver) {
@@ -43,7 +45,7 @@ public class Loginlocators {
 		
 		Utility utility = new Utility(driver);
 		
-		utility.clickVisibilityOfElementLocated(driver, submit, 10);
+		utility.clickVisibilityOfElementLocated(driver, submitBtn, 10);
 	}
 	
 	public void homeValidation() {
